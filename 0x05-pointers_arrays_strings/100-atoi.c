@@ -14,21 +14,20 @@ int _atoi(char *s)
 	int i = 0;
 	unsigned int res = 0;
 int j = 0;
-if (*s == '-')
+
+
+for (i = j; s[i] != '\0'; i++)
 {
+if (((char)s[i] >= 48 && (char)s[i] <= 57) || s[i] == '-')
+{
+	if (s[i] == '-')
+	{
 	sign = sign * -1;
-	j = 1;
-}
-
-
-for (i = j; s[i] != '\0'; ++i)
-{
-if (!((char)s[i] >= 48 && (char)s[i] <= 57))
-{
-return (0);
-break;
-}
+	continue;
+	}
 	res = res * 10 + s[i] - '0';
+continue;
+}
 }
 return (res * sign);
 }
