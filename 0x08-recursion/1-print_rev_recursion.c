@@ -1,23 +1,32 @@
 #include "main.h"
 #include <string.h>
 
+void print(int len, char *s);
 /**
  * _print_rev_recursion - Prints all string in reverse.
  * @s: The string to be printed. im the function
  */
-int count;
-char *s2;
 void _print_rev_recursion(char *s)
 {
-if (!(count > 0))
-{
-count = strlen(s) - 1;
-s = s + (count - 1);
+	int len = strlen(s);
+	s = s + (len - 1);
+
+print(len, s);
 }
-if (count >= 0) 
-	{
-count--;
+/**
+ * print- Prints all string in reverse.
+ * @s: The string to be printed. im the function
+ * @len: length of strimg 
+ * Description: print reverse
+ */
+
+void print(int len, char *s)
+{
+int length = len;
+if (*s)
+{
 _putchar(*s);
-_print_rev_recursion(s - 1);
-	}
+print(length, s - 1);
+}
+
 }
