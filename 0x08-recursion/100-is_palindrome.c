@@ -1,5 +1,9 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
+
+int checkpalindrome(int lenght, int size_n, char *s);
+
 /**
  * is_palindrome - Checks if a string is a palindrome.
  * @s: The string to be checked.
@@ -10,28 +14,30 @@
 int is_palindrome(char *s)
 {
 	int size = strlen(s);
-	int len = 0;
+
+return(checkpalindrome(0, size, s));
+}
+int checkpalindrome(int lenght, int size_n, char *s)
+{
+	int len =
+		lenght;
+	int size = size_n;
+
 	if (*s != '\0')
 {
-if (s[len] != s[size - len - 1])
+if (s[len] != s[size - 1])
 		{
 return (0);
 		}
 		else
 		{
-if (len == (size - 1))
+if ((size - 1 - len == 1) || (size - 1 - len == 2))
 {
-return (1);
+	return (1);
 }
 }	
-len++;
+size -= 1;
+return (checkpalindrome(len + 1, size, s));
 }
-len = len + is_palindrome(s + 1);
-if (len < (size - 1))
-{
-		return (len);
-}
-		else
-		return (1);
-
+return (1);
 }
