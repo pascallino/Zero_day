@@ -9,12 +9,6 @@
 int main(void)
 {
     int r;
-    r = is_palindrome("pascal");            printf("%d\n", r);
-r = is_palindrome("pop");            printf("%d\n", r);
-    r = is_palindrome("ppp");
-    printf("%d\n", r);
-r = is_palindrome("ada");
-printf("%d\n", r);
     r = is_palindrome("level");
     printf("%d\n", r);
     r = is_palindrome("redder");
