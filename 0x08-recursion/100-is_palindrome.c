@@ -11,16 +11,36 @@ int checkpalindrome(int lenght, int size_n, char *s);
  * Return: If the string is a palindrome - 1.
  *         If the string is not a palindrome - 0.
  */
+
+/**
+ * is_palindrome - Checks if a string
+ is a palindrome.
+ * @s: The string to be checked.
+ *
+ * Return: If the string is a palindrome - 1.
+ *         If the string is not a pal
+indrome - 0.
+ */
+
 int is_palindrome(char *s)
 {
 	int size = strlen(s);
 
 return(checkpalindrome(0, size, s));
 }
+
+/**
+ * cheeckpalindrome - Checks if a string
+ is a palindrome.
+ * @s: The string to be checked.
+ * @length: int len of strings
+ * @size_n: int size 
+ * Return: If the string is a palindrome - 1.
+ */
+
 int checkpalindrome(int lenght, int size_n, char *s)
 {
-	int len =
-		lenght;
+	int len =lenght;
 	int size = size_n;
 
 	if (*s != '\0')
