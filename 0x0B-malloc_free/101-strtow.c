@@ -1,10 +1,11 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 char **strtow(const char *str) {
-	char *wordStartAdd;
+	const char *wordStartAdd;
 	int nows;
-	char *ptr;
+const char *ptr;
 	char **words;
 	int word_len;
 	int j;
@@ -14,7 +15,7 @@ char **strtow(const char *str) {
 	nows = 0;
 	i = 0;
 /*set the string to ptr pointer */  
- *ptr = str;
+ ptr = str;
 /* dereference ptr & transverse character by character: this loop counts total  words in the string  */
     while (*ptr != '\0') 
     {
