@@ -9,7 +9,7 @@
 
 int **alloc_grid(int width, int height)
 {
-int i, j;
+int i, j, k;
 int **ptr;
 
 i = 0;
@@ -29,6 +29,10 @@ for (j = 0; j < width; j++)
 /* allocated by calloc or not */
     if (ptr[i] == NULL) 
     {
+	    for (k = 0; k < i; k++)
+		    free(ptr[k]);
+	    free(ptr);
+
 	    return (NULL);
     }
     ptr[i][j] = 0;

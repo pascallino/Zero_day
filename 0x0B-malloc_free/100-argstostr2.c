@@ -16,7 +16,9 @@ int length = 0;
 char *result;
 
 if (ac < 2 || av == NULL)
+{
 	return (NULL);
+}
 
 	for (i = 1; i < ac; i++)             {
 		length += (strlen(av[i]) + 1);

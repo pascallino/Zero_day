@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * *str_concat - redirevts the poinyer to a new pointer witth a new address 
+ * *str_concat - redirects the pointer to a new pointer witth a new address 
  * @src: the source string to append
  * @src: the source string to append
  * @dest
@@ -33,3 +33,4 @@ char *str_concat(char *dest, char *src)
 while (src[j] != '\0')               {                                    s[i] = src[j];
 i++;                                 j++;                                 }                                    i++;                                 s[i] = '\0';                         return (s);
 }
+
