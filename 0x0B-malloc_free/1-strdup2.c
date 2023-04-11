@@ -13,7 +13,7 @@ char *_strcpy(char *dest, char *src);
 char *_strdup(char *src)
  {
   char *dst;
-printf("old address is = %p\n", src); 
+/*printf("old address is = %p\n", src); */
   dst = malloc(strlen (src) + 1);  
   /*  Space for length plus null*/
 if (dst == NULL) 
