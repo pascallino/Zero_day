@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * *_strcat - concatenates @src to @dest
@@ -12,21 +13,26 @@ char *_strcat(char *dest, char *src)
 {
 
 	int i, j;
+	int len;
+	char *s;
 
 	i = 0;
 	j = 0;
-while (dest[i] != '\0')
+	len = strlen(src);
+s = (char*)malloc((strlen(dest) + strlen(src)) * sizeof(char)  + 1);
+
+while (s[i] != '\0')
 {
+s[i] = dest[i];
 i++;
 }
 while (src[j] != '\0')
 {
-dest[i] = src[j];
+s[i] = src[j];
 i++;
 j++;
 }
 i++;
-dest[i] = '\0';
-return (dest);
+s[i] = '\0';
+return (s);
 }
-
